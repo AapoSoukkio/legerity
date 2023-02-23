@@ -91,6 +91,8 @@ public class DatePicker : WindowsElementWrapper
         // Taps the time picker to show the popup.
         this.Click();
 
+        //The problem is here
+        //TODO Take a better look later
         // Finds the popup and changes the time.
         WindowsElementWrapper popup = this.Driver.FindElement(WindowsByExtras.AutomationId("DatePickerFlyoutPresenter"));
         popup.FindElement(WindowsByExtras.AutomationId("DayLoopingSelector")).FindElementByName(date.ToString("%d")).Click();
